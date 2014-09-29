@@ -1,0 +1,150 @@
+body {
+	color: $body-color;
+	@include body-font-regular;
+	@include fontSize(18px);
+	line-height: 1.45;
+	margin: 20px auto;
+	max-width: 550px;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $accent-color;
+	@include headline-font;
+	line-height: 1;
+}
+
+h1 {
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	border-color: $accent-color;
+	@include fontSize(80px);
+	margin-bottom: 44px;
+	padding: 15px 0;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+h1 + p {
+	@include fontSize(22px);
+}
+
+h2 {
+	@include fontSize(48px);
+	margin-top: 50px;
+	margin-bottom: 8px;
+}
+
+h2 + p {
+	margin-top: 0;
+}
+
+h3 {
+	@include fontSize(40px);
+	margin-top: 34px;
+	margin-bottom: 8px;
+}
+
+h3 + p {
+	margin-top: 0;
+}
+
+h3 + h4 {
+	margin-top: 20px;
+}
+
+h4 {
+	@include fontSize(30px);
+	margin-top: 34px;
+	margin-bottom: 4px;
+}
+
+h4 + p, h4 + h5 {
+	margin-top: 0;
+}
+
+h5 {
+	@include fontSize(22px);
+	margin-bottom: 4px;
+	margin-top: 0;
+}
+
+h5 + p {
+	margin-top:0;
+}
+
+h6 {
+	@include fontSize(20px);
+	margin-bottom: 4px;
+	margin-top: 0;
+}
+
+h6 + p {
+	margin-top: 0;
+}
+
+i, em {
+	@include body-font-ital;
+}
+
+b, strong {
+	@include body-font-bold;
+}
+
+a {
+	color: $background-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: lighten($accent-color, 20%);
+	text-decoration: none;
+}
+
+blockquote {
+	background-color: $background-color;
+	padding: 16px;
+	margin: 0;
+	border-radius: 10px;
+}
+
+blockquote p:first-of-type {
+	color: #fff;
+	@include fontSize(20px);
+	margin-top: 0;
+}
+
+blockquote cite {
+	color: #fff;
+	display: block;
+	@include body-font-regular;
+	text-align: right;
+}
+
+dt {
+	@include body-font-bold;
+}
+
+dd {
+	margin: 0 0 10px 0;
+}
+
+ul {
+	margin: 0 0 0 22px;
+	padding: 0;
+	list-style-type: none;
+}
+
+p + ul, p + ol {
+	margin-top: -18px;
+}
+
+ol {
+	list-style-type: decimal-leading-zero;
+	margin: 0 0 0 40px;
+	padding: 0;
+}
+
+small {
+	@include fontSize(13px);
+}
